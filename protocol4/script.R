@@ -49,3 +49,6 @@ model <- dagitty('dag {
 
 # Test the defined model against the computed correlation matrix
 localTests(model, sample.cov = corr, sample.nobs = nrow(data))
+
+# Plot the test results
+plotLocalTestResults(localTests(model, sample.cov = corr, sample.nobs = nrow(data)))
