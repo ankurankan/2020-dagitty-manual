@@ -1,9 +1,6 @@
 # Load the required packages
 library(dagitty)
 
-# Load the dataset
-data <- read.table( "brca.txt", header = TRUE )
-
 # Define our model structure using dagitty
 model <- dagitty( 'dag {
 	bb="0,0,1,1"
@@ -20,6 +17,9 @@ model <- dagitty( 'dag {
 
 # Optional: Plot the model structure
 plot(model)
+
+# Load the dataset
+data <- read.table( "brca.txt", header = TRUE )
 
 # Test the model structure against the dataset
 tests <- localTests(model, data, type = 'cis.chisq')
