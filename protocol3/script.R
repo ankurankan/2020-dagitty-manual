@@ -39,7 +39,7 @@ model <- dagitty('dag {
 data <- read.csv('protein_signal.csv')
 
 # Testing the model against the dataset
-tests <- localTests(model, d, "cis")
+tests <- localTests( x = model, data = data, type = "cis")
 print(tests)
 
 # Plot the test results
