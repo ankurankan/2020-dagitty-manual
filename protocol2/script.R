@@ -12,7 +12,6 @@ model <- dagitty( 'dag {
         age -> menopause
         irradiation -> recurrence
         menopause -> recurrence
-        age -> recurrence
 }' )
 
 # Optional: Plot the model structure
