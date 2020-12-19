@@ -3,15 +3,10 @@ library(dagitty)
 
 # Define our model structure using dagitty
 model <- dagitty( 'dag {
-	bb="0,0,1,1"
-        age [exposure,pos="0.552,0.162"]
-        irradiation [pos="0.844,0.403"]
-        menopause [pos="0.277,0.410"]
-        recurrence [outcome,pos="0.559,0.625"]
-        age -> irradiation
-        age -> menopause
-        irradiation -> recurrence
-        menopause -> recurrence
+        Age -> Irradiation
+        Age -> Menopause
+        Irradiation -> Recurrence
+        Menopause -> Recurrence
 }' )
 
 # Optional: Plot the model structure

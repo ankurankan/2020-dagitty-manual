@@ -1,4 +1,4 @@
-recurrence age irradiation menopause
+Recurrence Age Irradiation Menopause
 yes 50-59 yes no
 no 40-49 yes yes
 no 50-59 no no

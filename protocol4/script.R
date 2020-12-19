@@ -47,6 +47,9 @@ model <- dagitty('dag {
 	Sex -> { Education HoursPerWeek }
 }')
 
+# Plot the model
+plot(model)
+
 # Test the defined model against the computed correlation matrix
 localTests(model, sample.cov = corr, sample.nobs = nrow(data))
 

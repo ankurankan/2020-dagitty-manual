@@ -35,6 +35,9 @@ model <- dagitty('dag {
     Raf -> Mek
 }')
 
+# Plot the model structure
+plot(model)
+
 # Load the dataset
 data <- read.csv('protein_signal.csv')
 
