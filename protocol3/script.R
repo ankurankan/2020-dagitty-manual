@@ -41,9 +41,14 @@ plot(model)
 # Load the dataset
 data <- read.csv('protein_signal.csv')
 
-# Testing the model against the dataset
-tests <- localTests( x = model, data = data, type = "cis")
-print(tests)
+# Testing all the implied conditional independencies of the model against the dataset
+res <- localTests( x = model, data = data, type = "cis")
+print(res)
 
-# Plot the test results
-plotLocalTestResults(tests)
+# Testing the conditional independencies with max 2 conditioning variables.
+res <- localTests( x = model, data = data, max.conditioning.variables=2 )
+print(res)
+
+# Plot the 20 most problematic test results
+res <- res[order( abs(res$estimate)), ]
+plotLocalTestResults(tail (res, 20))
