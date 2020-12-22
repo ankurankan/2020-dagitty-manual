@@ -2,7 +2,8 @@
 library(dagitty)
 
 # Define the conventionally accepted model structure using dagitty.
-model <- dagitty('dag {
+model <- dagitty(
+    'dag {
     bb="-0.5,-0.5,0.5,0.5"
     P38 [pos="-0.155,-0.141"]
     PIP2 [pos="-0.337,0.063"]
@@ -33,7 +34,8 @@ model <- dagitty('dag {
     Plcg -> PKC [pos="-0.248,-0.271"]
     Mek -> Erk
     Raf -> Mek
-}')
+}'
+)
 
 # Plot the model structure
 plot(model)
@@ -42,13 +44,16 @@ plot(model)
 data <- read.csv('protein_signal.csv')
 
 # Testing all the implied conditional independencies of the model against the dataset
-res <- localTests( x = model, data = data, type = "cis")
+res <- localTests(x = model, data = data, type = "cis")
 print(res)
 
 # Testing the conditional independencies with max 2 conditioning variables.
-res <- localTests( x = model, data = data, max.conditioning.variables=2 )
+res <-
+    localTests(x = model,
+               data = data,
+               max.conditioning.variables = 2)
 print(res)
 
 # Plot the 20 most problematic test results
-res <- res[order( abs(res$estimate)), ]
+res <- res[order(abs(res$estimate)),]
 plotLocalTestResults(tail (res, 20))
