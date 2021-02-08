@@ -45,7 +45,7 @@ Rscript [script filename]
 ```
 This will generate a file called `Rplots.pdf` with the plots and print the results in the terminal.
 
-The code scripts can also be run from inside the R prompt using:
+The code scripts can also be run from the R prompt using:
 ```R
 source("[script filename]")
 ```
