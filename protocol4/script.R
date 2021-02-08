@@ -34,8 +34,6 @@ levels(data$MaritalStatus) <-
        NotMarried = c("Was-Married", "Never-married"))
 data$MaritalStatus <- as.integer(data$MaritalStatus)
 
-browser()
-
 # Compute the correlation matrix for the data using lavaan
 corr <- lavCor(data)
 
