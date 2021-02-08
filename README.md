@@ -27,9 +27,8 @@ For more details please refer: http://bioconductor.org/packages/release/bioc/htm
 ### Premessa ###
 In the R prompt:
 ```R
-install.packages( "devtools" )
-library( devtools )
-install_github( "ParkerICI/premessa" )
+install.packages( "remotes" )
+remotes::install_github( "ParkerICI/premessa" )
 ```
 For more details please refer: https://github.com/ParkerICI/premessa
 
