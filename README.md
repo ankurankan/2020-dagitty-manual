@@ -1,23 +1,20 @@
 Package Installation Instructions
 =================================
-Dagitty
--------
+### Dagitty ###
 In the R prompt:
 ```R
 install.packages( "dagitty" )
 ```
 For more details please refer: https://github.com/jtextor/dagitty
 
-Lavaan
-------
+### Lavaan ###
 In the R prompt:
 ```R
 install.packages( "lavaan" )
 ```
 For more details please refer: https://lavaan.ugent.be/tutorial/install.html
 
-FlowCore
---------
+### FlowCore ###
 In the R prompt:
 ```R
 if (!requireNamespace( "BiocManager", quietly = TRUE ) )
@@ -27,8 +24,7 @@ BiocManager::install( "flowCore" )
 ```
 For more details please refer: http://bioconductor.org/packages/release/bioc/html/flowCore.html
 
-Premessa
---------
+### Premessa ###
 In the R prompt:
 ```R
 install.packages( "devtools" )
